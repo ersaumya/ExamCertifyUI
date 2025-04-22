@@ -18,5 +18,12 @@ export const routes: Routes = [
         (m) => m.ContactUsComponent
       ),
   },
+  {
+    path: 'courses',
+    loadComponent: () =>
+      import('./components/courses/courses.component').then(
+        (m) => m.CoursesComponent
+      ),
+  },
   { path: '**', redirectTo: 'home' },
 ];
